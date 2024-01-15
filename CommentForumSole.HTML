@@ -8,6 +8,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- Style adjustment -->
     <style>
+        body {
+            background-color: #EBFFE5;
+            margin: 0;
+        }
+
+        .nav {
+            background-color: #D9FFCF;
+        }
+
+        .logo {
+            width: 75px;
+            height: 25px;
+        }
+
+        .nav-link {
+            color: black
+        }
+
+        .nav-link:hover {
+            color: #1E6C0B;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .dropdown:hover .dropdown-menu.show {
+            opacity: 1;
+        }
+
+        .dropdown-toggle::after {
+            content: none;
+        }
+
+        .gear-icon {
+            vertical-align: middle;
+            font-size: 1.5rem;
+            color: #0e3b03;
+        }
+
+        .gear-icon:hover {
+            vertical-align: middle;
+            font-size: 1.5rem;
+            color: #0e3b03;
+        }
+
+        .alert-icon {
+            font-size: 1.5rem;
+            color: #0e3b03;
+        }
+
+        .header {
+            background-color: #BCE8B1;
+        }
+
+        .jap-char,
+        .eng-char,
+        .course-prev {
+            color: #0e3b03;
+        }
+
+        .btn-view-course {
+            background-color: #0e3b03;
+        }
+
+        .btn-view-course:hover {
+            background-color: #145304;
+        }
+
+        .course-preview-ctn {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            text-align: left;
+            flex-wrap: wrap;
+        }
+
+        .card-container {
+            margin: 10px;
+        }
+
+        .see-more {
+            text-decoration: none;
+        }
+
         .link-muted {
             color: #aaa;
         }
@@ -39,6 +126,7 @@
           width: 100%;
 
         }
+        
     </style>
 
     <!-- Bootstrap CSS v5.2.1 -->
@@ -50,11 +138,49 @@
 </head>
 
 <body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img class="logo me-3" src="Pictures/logo.png" alt="tsukiden-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-success" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                            aria-expanded="false">My Courses</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">Program Overview</a></li>
+                            <li><a class="dropdown-item" href="#">Assessments</a></li>
+                            <li><a class="dropdown-item" href="#">Certifications</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#" class="btn btn-success logout-btn">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
   <section style="background-color: #EBFFE5;">
-    <div class="container my-5 py-5 text-dark">
+    
         <!-- Title -->
-        <div class="comment-forum-title" style="text-align: center; color:#0e3b03;">
-            <h1>Comment Forum</h1>
+        <div class="comment-forum-title" style="text-align: center; color:#0e3b03; ">
+            <h1>Forum</h1>
         </div>
         <div class="container my-5 py-1 text-dark">
             <!-- New container for input field and button/* Update: January 12, 2024*/ --> 
